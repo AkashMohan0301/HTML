@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+        function bill()
+            {
+                var id=document.getElementById("id1").value;
+                var name=document.getElementById("name1").value;
+                var price=document.getElementById("price1").value;
+                var qty=document.getElementById("qty1").value;
+                
+                sessionStorage.setItem("id2",id);
+                sessionStorage.setItem("name2",name);
+                sessionStorage.setItem("price2",price);
+                sessionStorage.setItem("qty2",qty);
+
+                window.location.href="page2.html";
+                
+
+            }   
+</script>
+<body>
+    <center>    
+        Product Id :<input type="text" name="" id="id1"><br>
+    Name :<input type="text" name="" id="name1"><br>
+    Price :<input type="text" name="" id="price1"><br>
+    Stock :<input type="text" name="" id="qty1"><br>
+    <input type="button" value="save" id="" onclick="bill()">
+    </center>
+
+</body>
+</html>

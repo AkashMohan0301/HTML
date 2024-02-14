@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>    
+            function dis()
+            {
+                var name=sessionStorage.getItem("name2");
+                var Price=sessionStorage.getItem("price2");
+                var bill=sessionStorage.getItem("bill2");
+                var dis=sessionStorage.getItem("dis");
+                var net=sessionStorage.getItem("net");
+
+                document.getElementById("name").value=name;
+                document.getElementById("p").value=Price;
+                document.getElementById("b").value=bill;
+                document.getElementById("d").value=dis;
+                document.getElementById("n").value=net;
+            }
+
+    </script>
+</head>
+<body onload="dis()">
+    <center>
+    Name :<input type="text" name="" id="name"><br><br>
+    Price :<input type="text" name="" id="p"><br><br>
+    Bill :<input type="text" name="" id="b"><br><br>
+    Discount :<input type="text" name="" id="d"><br><br>
+    Net Amount :<input type="text" name="" id="n"><br>
+</center>
+</body>
+</html>

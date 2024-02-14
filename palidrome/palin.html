@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pali()
+        {
+            var n=parseInt(document.getElementById("n1").value);
+            var res1=document.getElementById("para");
+            var res2="";
+            var rev=0;
+            temp=n;
+            while (n != 0) {
+         var r = n % 10;
+           rev = rev * 10 + r;
+          n = parseInt(n / 10);
+        }
+	if(temp==rev)
+	{
+         res2+=temp+" Is palindrome number" ; 
+	}
+	else
+	{
+	   res2+=temp+" Is not palindrome numer";
+	}
+         res1.innerHTML=res2
+        }
+    </script>
+</head>
+<form action=""></form>
+<body>
+    <input type="text" name="n1" id="n1"><br><br>
+    <input type="submit" name="submit"  onclick="pali()"><br><br>
+    <p id="para"></p>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc()
+        {
+            var f=(new Date(document.getElementById("d2").value).getTime()-new Date(document.getElementById("d1").value).getTime())/(1000*60*60*24);
+            alert("difference between days ="+f)
+        }
+        </script>
+</head>
+<body>
+    <input type="date" name="" id="d1"><br><br>
+    <input type="date" name="" id="d2"><br><br>
+    <input type="submit" name="" id="" onclick="calc()">
+</body>
+</html>

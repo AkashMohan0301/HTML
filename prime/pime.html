@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function prime()
+        {
+            var num1=parseInt(document.getElementById("num1").value);
+            var num2=parseInt(document.getElementById("num2").value);
+            var res1=document.getElementById("res");
+            var res2=""
+
+            for(var i=num1;i<=num2;i++)
+            {
+                var b=0;
+                for(j=1;j<=i;j++)
+                {
+                    if(i%j==0)
+                    {
+                        b=b+1;
+                    }
+                }
+                    if(b==2)
+                {
+                    res2+=i+"<br>"
+                }
+                
+            }
+                res1.innerHTML=res2
+        }
+    </script>
+</head>
+<body>
+    <h1>Prime</h1>
+    <input type="text" name="" id="num1" placeholder="Enter First number "><br><br>
+    <input type="text" name="" id="num2" placeholder="Enter Second number "><br><br>
+    <input type="submit" name="" id="Submit" onclick="prime()">  
+    <p id="res"></p>
+</body>
+</html>

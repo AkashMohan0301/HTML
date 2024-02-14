@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cal()
+        {
+            var dis2=parseInt(sessionStorage.getItem("dis"));
+            document.getElementById("txt1").value=dis2+"%";
+            var bill3=parseInt(sessionStorage.getItem("bill2"));
+            var disamt=parseInt(bill3*dis2/100);
+            var net=bill3-disamt;
+            sessionStorage.setItem("net",net);
+        }
+        function pg4()
+        {
+            window.location.href="page4.html";
+        }
+    </script>
+</head>
+<body onload="cal()">
+    <center>
+    DISCOUNT <br><br>
+    <input type="text" name="" id="txt1"><br><br>
+    <input type="submit" value="Net amount" onclick="pg4()">
+</center>
+</body>
+</html>

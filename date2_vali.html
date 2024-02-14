@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function date1()
+        {
+        var mnt=new Date(document.getElementById("dt").value);
+        var tody=new Date();
+        var day=["Sunday","Monday","Tuesday","Wenesday","Thursday","Friday","Saturday"];
+        var Month=["January","February","March","April","May","June","July","August","September","October","November","December"];
+        if(mnt>tody)
+        {
+            alert("Invalid date");
+        }
+        else{
+        document.getElementById("day").value=day[mnt.getDay()];
+        document.getElementById("Mnt").value=Month[mnt.getMonth()];
+        document.getElementById("year").value=mnt.getFullYear();
+        }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <input type="date" name="" id="dt"><br><br>
+    Day :<input type="text" id="day"><br><br>
+    Month :<input type="text" id="Mnt"><br><br>
+    Year :<input type="text" id="year"><br><br>
+    <input type="submit" name="" id="" onclick="date1()">
+</body>
+</html>

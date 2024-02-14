@@ -1,0 +1,10 @@
+div{
+  height: 400px;
+  width:800px ;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-image: url('images.jpeg');
+  background-size: 100% 100%;
+
+}
+    

@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function vali()
+        {
+            var name=document.getElementById("upper").value;
+            var email=document.getElementById("email").value;
+            var phn=document.getElementById("phn").value;
+            var pin=document.getElementById("pin").value;
+
+            var lc=/[a-z]/g;//lower case
+            var uc=/[A-Z]/g;//Upper case
+            var e1=/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;//email
+            var nm=/[0-9]/g;//c=numbers
+
+
+            if(!name.match(lc))
+            {
+                alert("Must Conatain lower case letter");
+                return false;
+            }
+
+            if(!name.match(uc))
+            {
+                alert("Must Conatain Upper case letter");
+                return false;
+            }
+
+            if(!email.match(e1))
+            {
+                alert("Invalid email");
+                return false;
+            }
+
+            if(!phn.match(nm))
+            {
+                alert("Must conatain numbers !!");
+                return false;
+            }
+
+            if(document.getElementById("phn").value.length!=10)
+            {
+                alert("Must conatain 10 numbers !!");
+                return false;
+            }
+            if(!pin.match(nm))
+            {
+                alert("Must conatin 6 numbers !!");
+                return false;
+            }
+
+            if(document.getElementById("pin").value.length=6)
+            {
+                alert("Must conatin 6 numbers !!");
+                return false;
+            }
+            
+
+ 
+            alert("Submitted");
+            return true;
+            
+        }
+
+
+
+
+    </script>
+</head>
+<form action="">
+<body>
+    <input type="text" name="" id="upper" placeholder="Name" required><br><br>
+    <input type="text" name="" id="email" placeholder="email" required><br><br>
+    <input type="text" name="" id="phn" placeholder="Phone" required><br><br>
+    <input type="text" name="" id="pin" placeholder="pin" required> <br><br>
+    <input type="submit" name="" id="" placeholder="Submit" required onclick="return vali()"><br><br>
+</body>
+</form> 
+</html>

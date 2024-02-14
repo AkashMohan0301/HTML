@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script>
+        function msg() {
+            var t1 = document.getElementById("name").value;
+            var mark1 = parseInt(document.getElementById("mark1").value);
+            var mark2 = parseInt(document.getElementById("mark2").value);
+            var tot = mark1 + mark2;
+            
+            sessionStorage.setItem("n1", t1);
+            sessionStorage.setItem("total", tot);
+            
+            window.location.href = "sess2.html";
+        }
+        
+    </script>
+</head>
+<body>
+    <center>
+        <form name="f1">
+            <input type="text" id="name"><br><br>
+            <input type="text" id="mark1"><br><br>
+            <input type="text" id="mark2"><br><br>
+            <input type="button" value="save" onClick="msg()">
+        </form>
+    </center>
+</body>
+</html>

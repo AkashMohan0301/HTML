@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=div, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        background-color: rgb(164, 61, 77);
+        width: 500px;
+        height: 850px;
+        border-radius: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        margin: auto;
+      }
+      #img {
+        background-image: url("medi.png");
+        background-position: center center;
+        height: 30%;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .p {
+        font-size: 17px;
+      }
+      .input {
+        width: 100%;
+        height: 30px;
+        border-radius: 100px;
+        background-color: rgba(233, 195, 205, 0.478);
+        border-color: rgba(240, 248, 255, 0.422);
+      }
+      .select {
+        width: 100%;
+        height: 30px;
+        background-color: rgba(233, 195, 205, 0.478);
+        border-color: rgba(240, 248, 255, 0.422);
+        border-radius: 100px;
+      }
+      .textarea {
+        width: 100%;
+        height: 200px;
+        background-color: rgba(233, 195, 205, 0.478);
+        border-color: rgba(240, 248, 255, 0.422);
+        border-radius: 20px;
+      }
+      .button {
+        height: 50px;
+        width: 100px;
+        border-radius: 5px;
+        background: linear-gradient(
+          to right,
+          rgba(211, 44, 150, 0.259),
+          rgb(155, 18, 95)
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div>
+        <div id="img"></div>
+        <p class="p">First Name</p>
+        <input
+          class="input"
+          type="text"
+          name=""
+          id=""
+          placeholder="Your Name"
+        />
+        <p class="p">Last Name</p>
+        <input
+          class="input"
+          type="text"
+          name=""
+          id=""
+          placeholder="Your last name"
+        />
+        <p class="p">Country</p>
+        <select class="select">
+          <option value="">Kozhikode</option>
+          <option value="">Malappuram</option>
+          <option value="">Wayanad</option>
+        </select>
+        <p class="p">Subject</p>
+        <input
+          type="textarea"
+          class="textarea"
+          placeholder="Write Something........"
+        /><br /><br />
+        <center><input class="button" type="Submit" value="Submit" /></center>
+      </div>
+    </div>
+  </body>
+</html>

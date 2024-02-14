@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+function age()
+{
+    var f=(new Date().getTime()-new Date(document.getElementById("d1").value).getTime())/(1000*60*60*24);
+    var c=parseInt(f/365);
+            alert("Age ="+c)
+            
+}
+</script>
+
+
+</head>
+<body>
+    <input type="date" name="" id="d1"><br><br>
+    <input type="submit" name="" value="Submit" id="" onclick="age()">
+</body>
+</html>

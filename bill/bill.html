@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function Bill()
+        {
+            var q=parseInt(document.getElementById("quantity").value);
+            var p=parseInt(document.getElementById("price").value);
+            var b=q*p;
+            document.getElementById("bill").value=b
+
+            if (b>5000)
+                {
+                var dis=25;
+                }
+                else if(b>2500)
+                    {
+                        var dis=15;
+                    }
+                else if(b>1000)
+                    {
+                        var dis=5;
+                    }
+            else    {
+                var dis=2;
+                    }
+            document.getElementById("Discount").value=dis+"%"
+
+            var dis2=b*dis/100;
+            net=b-dis2;
+            document.getElementById("Net").value=net;
+            var name=document.getElementById("name").value;
+            document.getElementById("product").value=name         
+        }
+    </script>
+    <style>
+        #input
+        {
+            margin: auto;
+            width: 300px;
+            height: fit-content;
+            border: 2px solid red;
+            background-color: aquamarine;
+        }
+        #output
+        {
+            margin: auto;
+            margin-top: 20px;
+            width: 300px;
+            height: fit-content;
+            border: 2px solid red;
+            background-color: rgb(191, 255, 127);
+        }
+        #button
+        {
+            border: 0dvh;
+        }
+
+    </style>
+</head>
+<body>
+        <div id="input">
+            <center>
+            <h3>Product</h3>
+           Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" id="name"><br><br>
+            Quantity&nbsp;:<input type="number" id="quantity"><br><br>
+            Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" id="price" ><br><br>
+            <input type="submit" value="Submit" onclick="Bill()"><br><br>
+            </center>
+        </div>
+        
+        <div id="output">
+            <center>
+                <h3>Total</h3>
+            Product &nbsp;&nbsp;:<input type="text" id="product" placeholder=""><br><br>
+            Bill&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" id="bill" ><br><br>
+            Discount&nbsp;:<input type="text" id="Discount" ><br><br>
+           Net amt &nbsp;&nbsp;:<input type="text" id="Net" ><br><br> 
+        </center>
+        </div>
+</body>
+</html>

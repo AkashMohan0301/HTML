@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bill2()
+        {
+        
+         var p=parseInt(sessionStorage.getItem("price2"));   
+         var q=parseInt(sessionStorage.getItem("qty2"));  
+         var b=p*q;
+         document.getElementById("txt1").value=b;
+         sessionStorage.setItem("bill2",b);
+         if (b>=5000)
+                {
+                var dis=25;
+                }
+                else if(b>=2500 && b<5000)
+                    {
+                        var dis=15;
+                    }
+                else if(b>=1000 && b<2500)
+                    {
+                        var dis=5;
+                    }
+        else    {
+                var dis=2;
+                    }
+        }
+
+        sessionStorage.setItem("dis",dis);
+
+        function pg3()
+        {
+            window.location.href=("page3.html");
+        }
+
+        
+        
+
+    </script>
+</head>
+<form action="">
+<body onload="bill2()">
+    <center>
+        BILL <br><br>
+    <input type="text" name="" id="txt1"><br><br>
+    <input type="button" value="save" id="btn1" onclick="pg3()">
+    </center>
+</body>
+</form> 
+</html>

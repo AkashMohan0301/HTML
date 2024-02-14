@@ -1,0 +1,22 @@
+<html>
+    <head>
+        
+    <script>
+        function msg()
+        {
+        data=[
+            {pname:"ram",price:3000,stock:8},
+            {pname:"cpu",price:2500,stock:9},
+            {pname:"mouse",price:3500,stock:10},
+            {pname:"keyborad",price:4000,stock:15},
+            {pname:"motherboard",price:5000,stock:20},
+        ]
+       const data1=data.filter((value)=>value.price>3000);
+        document.write(JSON.stringify(data1))
+        }
+    </script>
+    </head>
+    <body onload="msg()">
+        
+    </body>
+</html>
